@@ -8,6 +8,7 @@ const score4 = document.querySelector('[data-score4]')
 const finalColumn = document.querySelector('[data-final-column]')
 
 const Buttons = document.querySelectorAll('[data-part]')
+// console.log(parseInt(score1.innerText));
 
 var val = [
     {
@@ -70,9 +71,12 @@ const SELECTIONS = [
         // }
          console.log(selection.value.name === player_beat.value.beats);
          let ans = (selection.value.name === player_beat.value.beats);
+        //  if(ans){
+        //     if()
+        //  }
         //  let s = Buttons.find(x => x.dataset.selection == selection[0].name)
         //  if(selection[0].name ===  s)
-         addSelectionResult(selection.value , ans);
+         addSelectionResult(selection , ans);
         //  return selection.value.name === player_beat.value.beats;
     
       })
@@ -96,10 +100,32 @@ const SELECTIONS = [
 //   }
 function addSelectionResult(selection, winner) {
   const div = document.createElement('div')
-  div.innerText = selection.name
+  div.innerText = selection.value.name
+  let y;
+//   val.forEach(t => {
+//     if(t.name === selection.name){
+//         y = 
+//     }
+//   })
+// if()
   div.classList.add('result-selection')
   if (winner) div.classList.add('winner')
-  finalColumn.after(div)
+//   console.log(selection.name)
+//   console.log(score1.innerText)
+
+  if(selection.name == score1.innerText){
+    score1.after(div)
+  }
+  if(selection.name == score2.innerText){
+    score2.after(div)
+  }
+  if(selection.name == score3.innerText){
+    score3.after(div)
+  }
+  if(selection.name == score4.innerText){
+    score4.after(div)
+  }
+//   finalColumn.after(div)
 }
 
 // const score1 = document.querySelector('[data-score1]')

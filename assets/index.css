@@ -5,8 +5,8 @@ body{
 #Players{
     margin: 20px;
     display: flex;
-    flex-direction: column;
-    /* flex-wrap: ; */
+    /* flex-direction: column; */
+    flex-wrap:wrap ;
     justify-content: center;
 }
 
@@ -24,3 +24,7 @@ body{
     opacity: 1;
     font-size: 1.5rem;
   }
+
+ #hide{
+    color: transparent;
+ }
