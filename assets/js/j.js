@@ -100,8 +100,10 @@ const SELECTIONS = [
 //   }
 function addSelectionResult(selection, winner) {
   const div = document.createElement('div')
-  div.innerText = selection.value.name
-  let y;
+  // div.innerText = selection.value.name
+  div.innerText = JSON.stringify(selection.value.name)
+
+  // let y;
 //   val.forEach(t => {
 //     if(t.name === selection.name){
 //         y = 
