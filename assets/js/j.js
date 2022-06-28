@@ -115,6 +115,7 @@ function addSelectionResult(selection, winner) {
   const div2 = document.createElement('div')
 
   // div.innerText = selection.value.name
+  div.innerText = JSON.stringify(selection.value.name)
 
   div2.innerText = JSON.stringify(selection.wins)
 
