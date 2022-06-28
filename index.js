@@ -2,6 +2,9 @@ const express = require('express');
 const port = 8000;
 const path = require('path');
 
+const db = require('./config/mongoose')
+const Iteration = require('./models/iteration')
+
 const app = express();
 
 app.set('view engine','ejs')
@@ -14,6 +17,10 @@ app.use(express.urlencoded())
 app.use(express.static('assets'))
 
 app.get('/game/start' , function(req, res){
+
+    // Iteration.create({
+    //     name: 
+    // })
     return res.render('game');
 });
 
